@@ -10,9 +10,9 @@ function App() {
     <div style={divStyle}>
         <h1>Hello world!!!</h1>
 
-        <Car />
-        <Car />
-        <Car />
+        <Car name={'Skoda'} year={2007} />
+        <Car name={'Ford'} year={2008} />
+        <Car name={'Tesla'} year={2013} />
     </div>
   );
 }
