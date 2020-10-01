@@ -12,7 +12,7 @@ const Post = (props) => {
                 <span>Like: {props.like}</span>  
             </div>
             <div>
-                <span>Dislike: {props.disLike}</span>
+                <span>Dislike:</span>
             </div>
         </div>
     );
