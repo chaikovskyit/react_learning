@@ -1,27 +1,26 @@
-import React from 'react'
-
-import classes from './Nav.module.css';
+import React from 'react';
+import s from './Nav.module.css';
 
 const Nav = () => {
-    return (
-        <nav className={classes.nav}>
-            <div className='item'>
-                <a href='#s'>Profile</a>
-            </div>
-            <div className={classes.item}>
-                <a href='#s'>Messages</a>
-            </div>
-            <div className={classes.item}>
-                <a href='#s'>News</a>
-            </div>
-            <div className={classes.item}>
-                <a href='#s'>Music</a>
-            </div>
-            <div className={classes.item}>
-                <a href='#s'>Settings</a>
-            </div>
-        </nav>
-    );
-}
+	return (
+		<nav className={s.nav}>
+			<div className={s.item}>
+				<a href='/content'>Profile</a>
+			</div>
+			<div className={s.item}>
+				<a href='/dialogs'>Messages</a>
+			</div>
+			<div className={s.item}>
+				<a href='/news'>News</a>
+			</div>
+			<div className={s.item}>
+				<a href='/music'>Music</a>
+			</div>
+			<div className={s.item}>
+				<a href='/settings'>Settings</a>
+			</div>
+		</nav>
+	);
+};
 
 export default Nav;
