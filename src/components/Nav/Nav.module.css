@@ -1,8 +1,12 @@
 .nav {
-    grid-area: n;
-    background-color: rgb(245, 199, 199);
+	grid-area: n;
+	background-color: black;
 }
 
-.item {
-    color: green;
+.item a {
+	color: rgb(223, 201, 3);
+}
+
+.item a.activeLink {
+	color: red;
 }
