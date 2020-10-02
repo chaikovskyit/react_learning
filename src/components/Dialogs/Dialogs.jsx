@@ -25,11 +25,21 @@ const Dialogs = () => {
 		{ id: 7, name: 'CapitanAmerica' },
 	];
 
+	let messagesData = [
+		{ id: 1, message: 'Hello' },
+		{ id: 2, message: 'How are you' },
+		{ id: 3, message: 'I kill you' },
+		{ id: 4, message: 'Not today' },
+		{ id: 5, message: 'Ahahaha' },
+		{ id: 6, message: 'It is not fun' },
+		{ id: 7, message: 'I want eat' },
+	];
+
 	return (
 		<div className={s.dialogs}>
 			<div className={s.dialogItems}>
-				<DialogItem name='Yoda' id='1' />
-				<DialogItem name='BatMan' id='2' />
+				<DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+				<DialogItem name={dialogsData[1].name} id={dialogsData[2].id} />
 				<DialogItem name='SuperMan' id='3' />
 				<DialogItem name='SpiderMan' id='4' />
 				<DialogItem name='Hulk' id='5' />
@@ -37,7 +47,7 @@ const Dialogs = () => {
 				<DialogItem name='CapitanAmerica' id='7' />
 			</div>
 			<div className={s.messages}>
-				<Message message='Hello' />
+				<Message message={messagesData[0].message} />
 				<Message message='How are you' />
 				<Message message='I kill you' />
 				<Message message='Not today' />
