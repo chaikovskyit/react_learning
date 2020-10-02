@@ -1,17 +1,12 @@
 import React from 'react';
 // import s from './Content.module.css';
-import MyPosts from './MyPosts/MyPosts';
+import MyPosts from './MyPosts/MyPosts.jsx';
+import ProfileInfo from './ProfileInfo/ProfileInfo.jsx';
 
 const Content = () => {
 	return (
 		<div>
-			<div>
-				<img
-					src='https://funduk.ua/upload/iblock/920/9204ffce5f9431a5362f57a507ffd0c2.png'
-					alt=''
-				/>
-			</div>
-			<div>ava + desc</div>
+			<ProfileInfo />
 			<MyPosts />
 		</div>
 	);
