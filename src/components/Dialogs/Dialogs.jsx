@@ -40,20 +40,10 @@ const Dialogs = () => {
 			<div className={s.dialogItems}>
 				<DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
 				<DialogItem name={dialogsData[1].name} id={dialogsData[2].id} />
-				<DialogItem name='SuperMan' id='3' />
-				<DialogItem name='SpiderMan' id='4' />
-				<DialogItem name='Hulk' id='5' />
-				<DialogItem name='IronMan' id='6' />
-				<DialogItem name='CapitanAmerica' id='7' />
 			</div>
 			<div className={s.messages}>
 				<Message message={messagesData[0].message} />
-				<Message message='How are you' />
-				<Message message='I kill you' />
-				<Message message='Not today' />
-				<Message message='Ahahaha' />
-				<Message message='It is not fun' />
-				<Message message='I want eat' />
+				<Message message={messagesData[1].message} />
 			</div>
 		</div>
 	);
