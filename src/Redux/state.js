@@ -28,4 +28,14 @@ let state = {
 	},
 };
 
+export let addPost = (postMessage) => {
+	let newPost = {
+		id: 5,
+		message: postMessage,
+		like: 0,
+	};
+
+	state.contentPage.posts.push(newPost);
+};
+
 export default state;
