@@ -10,7 +10,7 @@ const MyPosts = () => {
 	let postsElement = posts.map((p) => {
 		return <Post message={p.message} like={p.like} disLike={p.disLike} />;
 	});
-
+	
 	return (
 		<div className={s.postsBlock}>
 			<h3>My posts</h3>

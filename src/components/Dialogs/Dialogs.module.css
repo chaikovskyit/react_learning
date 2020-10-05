@@ -3,7 +3,6 @@
 	grid-template-columns: 2fr 10fr;
 	row-gap: 5px;
 	column-gap: 5px;
-	text-decoration: none;
 }
 
 .dialogItems {
@@ -15,8 +14,12 @@
 	padding: 10px;
 }
 
-.dialog a.active {
-	color: red;
+.dialog a {
+	color: rgb(110, 34, 34);
+	text-decoration: none;
+}
+a:active {
+	color: black;
 }
 
 .messages {
