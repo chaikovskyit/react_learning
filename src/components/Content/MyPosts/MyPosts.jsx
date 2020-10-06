@@ -7,11 +7,17 @@ const MyPosts = (props) => {
 		return <Post message={p.message} like={p.like} disLike={p.disLike} />;
 	});
 
+	//create element link (id-JS)
 	let newPostElement = React.createRef();
 
+	// create callback function
 	let addPost = () => {
+		// get textarea value(JS input.value)
 		let text = newPostElement.current.value;
+		// call function from BLL (/Redux f(addPost))
 		props.addPost(text);
+		// clear textarea place
+		newPostElement.current.value = '';
 	};
 
 	return (
@@ -19,9 +25,11 @@ const MyPosts = (props) => {
 			<h3>My posts</h3>
 			<div>
 				<div>
+					{/* Tied the link newPostElement */}
 					<textarea ref={newPostElement}></textarea>
 				</div>
 				<div>
+					{/* add callback function */}
 					<button onClick={addPost}>Add post</button>
 				</div>
 			</div>
