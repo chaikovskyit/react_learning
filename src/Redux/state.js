@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from './../render';
+let rerenderEntireTree = () => {
+	console.log('state changed');
+};
 
 let state = {
 	contentPage: {
@@ -31,21 +33,24 @@ let state = {
 	},
 };
 
-export let addPost = () => {
+export const addPost = () => {
 	let newPost = {
 		id: 5,
 		message: state.contentPage.newPostText,
 		like: 0,
 	};
-
 	state.contentPage.posts.push(newPost);
-	state.contentPage.newPostText('');
+	state.contentPage.newPostText = '';
 	rerenderEntireTree(state);
 };
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
 	state.contentPage.newPostText = newText;
 	rerenderEntireTree(state);
+};
+
+export const subscribe = (observer) => {
+	rerenderEntireTree = observer;
 };
 
 export default state;

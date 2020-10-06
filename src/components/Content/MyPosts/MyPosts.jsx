@@ -7,14 +7,10 @@ const MyPosts = (props) => {
 		return <Post message={p.message} like={p.like} disLike={p.disLike} />;
 	});
 
-	//create element link (id-JS)
 	let newPostElement = React.createRef();
 
-	// create callback function
 	let addPost = () => {
-		// call function from BLL (/Redux f(addPost))
 		props.addPost();
-		// clear textarea place
 	};
 
 	let onPostChange = () => {
@@ -27,11 +23,9 @@ const MyPosts = (props) => {
 			<h3>My posts</h3>
 			<div>
 				<div>
-					{/* Tied the link newPostElement */}
 					<textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
 				</div>
 				<div>
-					{/* add callback function */}
 					<button onClick={addPost}>Add post</button>
 				</div>
 			</div>
