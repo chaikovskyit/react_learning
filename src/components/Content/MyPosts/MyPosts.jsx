@@ -12,12 +12,14 @@ const MyPosts = (props) => {
 
 	// create callback function
 	let addPost = () => {
-		// get textarea value(JS input.value)
-		let text = newPostElement.current.value;
 		// call function from BLL (/Redux f(addPost))
-		props.addPost(text);
+		props.addPost();
 		// clear textarea place
-		newPostElement.current.value = '';
+	};
+
+	let onPostChange = () => {
+		let text = newPostElement.current.value;
+		props.updateNewPostText(text);
 	};
 
 	return (
@@ -26,7 +28,7 @@ const MyPosts = (props) => {
 			<div>
 				<div>
 					{/* Tied the link newPostElement */}
-					<textarea ref={newPostElement}></textarea>
+					<textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
 				</div>
 				<div>
 					{/* add callback function */}

@@ -6,6 +6,7 @@ let state = {
 			{ id: 1, message: 'Hi, how are you', like: 1, disLike: 12 },
 			{ id: 2, message: 'Learn React', like: 12, disLike: 0 },
 		],
+		newPostText: 'it-kamasutra',
 	},
 
 	dialogsPage: {
@@ -30,14 +31,20 @@ let state = {
 	},
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
 	let newPost = {
 		id: 5,
-		message: postMessage,
+		message: state.contentPage.newPostText,
 		like: 0,
 	};
 
 	state.contentPage.posts.push(newPost);
+	state.contentPage.newPostText('');
+	rerenderEntireTree(state);
+};
+
+export let updateNewPostText = (newText) => {
+	state.contentPage.newPostText = newText;
 	rerenderEntireTree(state);
 };
 
